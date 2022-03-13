@@ -6,3 +6,10 @@ class Serializationclass(serializers.ModelSerializer):
     class Meta:
         model=Registration
         fields='__all__'
+
+class Serializationsort(serializers.ModelSerializer):
+    collegeName = serializers.CharField()
+    total = serializers.FloatField()
+    class Meta:
+        model=Registration
+        fields=['collegeName','total']
